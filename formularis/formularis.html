@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset= "utf-8"/>
+	<title>Formulari</title>
+	<style>span {margin-left: 25px;}</style>
+	<script type="text/javascript"> 
+		function mostrar (seleccion) {
+		document.getElementById("valor").innerHTML = seleccion;
+	}
+	</script>
+</head>
+
+<body>
+	<form action="">
+		<fieldset>
+			<legend><b><i>Dades Personals</i></b></legend>
+			<p>Nom: <input type="text" name="nom">
+			Cognoms: <input type="text" name="cognoms"></p>
+			<p>CP: <input type="text" name="cp" size="6" maxlength="5" 
+				required pattern="[0-9] {5}">
+			Provincia: <input type="text" name="provincia" 
+			readonly name="Provincia" value="Girona"></p>
+			<p>Telèfon: <input type="tel" name="telefon">
+			E-mail: <input type="email" name="mail" required>
+						<input type="submit" value="OK"></p>
+		</fieldset><br>
+		<fieldset>
+			<legend><b><i>Comanda</i></b></legend>
+			<p>Model: <input type="text" name="model"></p>
+			<p>Talla: <input type="radio" name="talla" value="S">S
+			<input type="radio" name="talla" value="M">M
+			<input type="radio" name="talla" value="L" checked="">L
+			<input type="radio" name="talla" value="XL">XL</p>
+			<p>Quantitat: <input type="number" name="quantitat" 
+				value="1" min="1" max="15"></p>
+			<p>Observacions:</p>
+			<textarea rows="4" cols="30"></textarea>
+		</fieldset><br>
+		<fieldset>
+			<legend><b><i>Navegador</i></b></legend>
+			<p>Quin és el teu navegador?</p>
+				<select>
+					<option value="0" selected> </option>
+					<option value="1">Internet Explorer</option>
+					<option value="2">Mozilla Firefox</option>
+					<option value="3">Google Chrome</option>
+				</select>
+				<p>Serveis:
+					<input type="checkbox" name="n1"> ERP
+					<input type="checkbox" name="n2"> CRM
+					<input type="checkbox" name="n3"> Formació
+				</p>
+		</fieldset><br>
+		<fieldset>
+			<legend><b><i>Empresa</i></b></legend>
+			<p>Tipus d'empresa: <input type="" list="tipusempresa">
+			<datalist id="tipusempresa"><!- dona opcions
+				<option value="SA"></option>
+				<option value="SL"></option>
+				<option value="SC"></option>
+			</datalist></p>
+			<p>Color preferit <input type="color" name="color"></p>
+		</fieldset><br>
+		<fieldset>
+			<legend><b><i>Programa una visita</i></b></legend>
+			<p>Data: <input type="date" name="dataalta"></p>
+			<p>Mes actual: <input type="month" name="mes"></p>
+			<p>Hora: <input type="time" min="11:00" max="23:00" 
+				step="900" value="11:00"></p>
+			<p>Setmana de vacances: <input type="week" name="setmana"></p>
+			<p>Data formulari: <input type="datetime-local" name="hora"></p>
+		</fieldset><br>
+	</form>
+
+	<form method="post" action="mailto:albalorca@gmail.com"></form>
+		<fieldset>
+			<legend><b><i>Contacte</i></b></legend>
+			<p>Nom: <input type="" name="nom"></p>
+			<p>Email: <input type="email" name="mail" required></p>
+			<input type="submit" value="enviar">
+			<input type="reset" value="netejar">
+			<button onclick="alert ('Acció de Javascript')">Faci click aquí</button>
+			<button><img src="barquito.jpeg" alt="enviar" width=20px height=20px></button>
+		</fieldset><br>
+		<fieldset>
+			<legend><b><i>Pagament</i></b></legend>
+			<label for="idtext01">nº.visa</label>
+			<input type="text" name="idtext01"><br>
+
+			<p>Tipus de targeta</p>
+			<input type="radio" name="cash" id="cash1">
+			<label for="cash1">Visa</label>
+			<input type="radio" name="cash" id="cash2">
+			<label for="cash2">American Express</label>
+			<input type="radio" name="cash" id="cash3">
+			<label for="cash3">Mastercard</label>
+
+			<p>Finançament:</p> 
+			<input type="range" name="cursor" min="1" max="5" value="3" step="1" 
+			style="margin-top: 10; width: 155px"; onchange="mostrar(this.value)"></p>
+			<div style="margin-top: -2px">
+			<span style="margin-left: 2px">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			</div>
+			<p>Ha escollit financiar en<span id="valor">3</span> mesos</p>
+		</fieldset>
+		
+	</form>
+</body>
+</html>

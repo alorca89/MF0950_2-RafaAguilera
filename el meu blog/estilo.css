@@ -1,0 +1,57 @@
+header {
+	background-color:cadetblue; padding: 1%;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: black;
+	padding: 1%;
+}
+
+h2 {
+	padding: 1%;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+.experiencia {background: rgba(75, 124, 126, 0.801);}
+
+.textexperiencia{
+	text-align: justify;
+}
+
+.idiomes {background: rgba(75, 124, 126, 0.801);}
+
+body {
+	text-align: justify;
+	border: 1px solid #999999;
+	font: sans-serif;
+}
+
+div {
+	width: 960px;
+	background: white;
+	margin: 15px auto;
+	padding: 40px;
+	text-align: justify;
+}
+
+nav li {
+	list-style: none;
+	padding: 5px;
+	font: bold verdana;
+	display: inline-block;
+}
+
+.lateral {
+	width: 200px;
+	border: 1px solid black;
+}
+
+p{
+	text-align: justify;
+}
